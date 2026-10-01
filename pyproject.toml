@@ -1,0 +1,23 @@
+[project]
+name = "eval-harness"
+version = "0.1.0"
+description = "Compare free OpenRouter models on your own test prompts"
+readme = "README.md"
+authors = [
+    { name = "priyal6", email = "layirps06@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "openai>=3.22.1",
+    "python-dotenv>=1.2.3",
+    "pyyaml>=6.0.3",
+    "rich>=15.0.0",
+]
+
+[project.scripts]
+eval-harness = "eval_harness.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.11.32,<0.12.0"]
+build-backend = "uv_build"

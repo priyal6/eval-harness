@@ -1,0 +1,22 @@
+
+
+models:
+   - nvidia/nemotron-3-ultra-550b-a55b:free   
+   - qwen/qwen3.8-27b                  
+   - deepseek/deepseek-v4.1-flash   
+   - openrouter/auto     
+   - openrouter/free      
+settings:
+  temperature: 0            
+  max_tokens: 4000          
+  reasoning_effort: low     
+  timeout_seconds: 180      
+  seconds_between_requests: 3.2   
+  daily_request_limit: 50   
+
+judge_model: gpt-6-luna      
+
+system_prompt: |
+  Solve the problem. Think it through, then finish with one final line in
+  exactly this form:
+  Answer: <your answer>
